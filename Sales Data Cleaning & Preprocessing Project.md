@@ -13,9 +13,8 @@ This project demonstrates a comprehensive data cleaning and preprocessing workfl
  - Detect and report duplicate records.
 
 
-### Dataset
-The dataset sales_data_sample.csv includes the following columns:
 ## 📂 Dataset
+This project demonstrates SQL-based data cleaning and preprocessing using a real-world dataset.
 The dataset used in this project is:  
 [sales_data_sample.csv](./sales_data_sample.csv)
 
