@@ -5,8 +5,7 @@
   * [Key objectives](#key-objectives)
 - [Dataset](#dataset)
 - [Data Cleaning Process](#data-cleaning-process)
-    - [1 Load Data](#1-load-data)
-[Task 1: 𝐑𝐞𝐦𝐨𝐯𝐞d 𝐃𝐮𝐩𝐥𝐢𝐜𝐚𝐭𝐞 𝐑𝐞𝐜𝐨𝐫𝐝𝐬](#𝐓𝐚𝐬𝐤-𝟏-𝐑𝐞𝐦𝐨𝐯𝐞𝐝-𝐃𝐮𝐩𝐥𝐢𝐜𝐚𝐭𝐞-𝐑𝐞𝐜𝐨𝐫𝐝𝐬)
+    - [1. Load Data](#1-load-data)
 
 
 ##  Project Overview
@@ -57,7 +56,8 @@ The dataset used in this project is:
 
 ## Data Cleaning Process
 
-**1 Load Data** Data loaded into MySQL using LOAD DATA INFILE for structured exploration.
+### 1. Load Data** 
+Data loaded into MySQL using LOAD DATA INFILE for structured exploration.
 
 **2. Handling NULL and Missing Values:** All empty strings ('') were converted to NULL using NULLIF() for consistent handling of missing data.
 
