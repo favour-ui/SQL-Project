@@ -6,6 +6,7 @@
 - [Dataset](#dataset)
 - [Data Cleaning Process](#data-cleaning-process)
     - [1. Load Data](#1-load-data)
+    - [2. Handling NULL and Missing Values](#2-Handling-NULL-and-Missing-Values)
 
 
 ##  Project Overview
@@ -56,10 +57,11 @@ The dataset used in this project is:
 
 ## Data Cleaning Process
 
-### 1. Load Data** 
+### 1. Load Data
 Data loaded into MySQL using LOAD DATA INFILE for structured exploration.
 
-**2. Handling NULL and Missing Values:** All empty strings ('') were converted to NULL using NULLIF() for consistent handling of missing data.
+### 2. Handling NULL and Missing Values
+All empty strings ('') were converted to NULL using NULLIF() for consistent handling of missing data.
 
 ````sql
 UPDATE sales_data_sample
@@ -140,7 +142,7 @@ ALTER TABLE sales_data_sample
 MODIFY COLUMN SALES FLOAT;
 ````
 
-### 3. Standardizing Dates
+### 4. Standardizing Dates
 
 The ORDERDATE column contained inconsistent formats. The SUBSTRING_INDEX function and STR_TO_DATE were used to standardize dates.
 
@@ -180,7 +182,7 @@ SET Month_Name = MONTHNAME(ORDERDATE);
 SELECT Month_Name FROM sales_data_sample;
 ````
 
-### 4. Standardizing Categorical Columns
+### 5. Standardizing Categorical Columns
 **Status**
 
 Order statuses were Categorized into three main categories:
