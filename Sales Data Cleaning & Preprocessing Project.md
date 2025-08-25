@@ -13,3 +13,30 @@ This project demonstrates a comprehensive data cleaning and preprocessing workfl
  - Detect and report duplicate records.
 
 ### Dataset
+The dataset sales_data_sample.csv includes the following columns:
+
+| Column Name               | Description                           |
+| ------------------------- | ------------------------------------- |
+| ORDERNUMBER               | Unique order identifier               |
+| QUANTITYORDERED           | Quantity of products in the order     |
+| PRICEEACH                 | Unit price of the product             |
+| ORDERLINENUMBER           | Line number in the order              |
+| SALES                     | Total sales amount                    |
+| ORDERDATE                 | Date of the order                     |
+| STATUS                    | Current status of the order           |
+| QTR\_ID                   | Quarter of the order                  |
+| MONTH\_ID                 | Month number of the order             |
+| YEAR\_ID                  | Year of the order                     |
+| PRODUCTLINE               | Category of the product               |
+| MSRP                      | Manufacturer's suggested retail price |
+| PRODUCTCODE               | Unique product identifier             |
+| CUSTOMERNAME              | Name of the customer                  |
+| PHONE                     | Customer phone number                 |
+| ADDRESSLINE1/2            | Customer address                      |
+| CITY                      | City of the customer                  |
+| STATE                     | State of the customer                 |
+| POSTALCODE                | Postal code                           |
+| COUNTRY                   | Country of the customer               |
+| TERRITORY                 | Sales territory                       |
+| CONTACTFIRSTNAME/LASTNAME | Customer contact name                 |
+| DEALSIZE                  | Size of the deal                      |
