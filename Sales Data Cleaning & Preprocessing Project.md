@@ -1,10 +1,10 @@
 # Sales Data Cleaning & Preprocessing Project
 
 ## Table of Contents
-[Project Overview](#project-overview)
- * [Key objectives](#key-objectives)
-
-[Dataset](#dataset)
+- [Project Overview](#project-overview)
+  * [Key objectives](#key-objectives)
+- [Dataset](#dataset)
+- [Data Cleaning Process](#data-cleaning-process)
 
 
 ##  Project Overview
