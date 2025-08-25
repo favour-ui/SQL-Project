@@ -9,5 +9,6 @@ All tasks here were completed using Mysql, but you can easily adapt them to othe
 Here are the projects you will find in this repository:
 
 
+[1.Nature's Best Drink leakyCap RCA](https://github.com/favour-ui/SQL-Project/blob/main/Nature%20Best%20Cap%20Analysis/README..md)
 
 [2. Sales Data Cleaning & Preprocessing Project](https://github.com/favour-ui/SQL-Project/blob/main/Sales%20Data%20Cleaning%20%26%20Preprocessing%20Project.md)
