@@ -3,7 +3,8 @@
 ## Table of Contents
 [Project Overview](#project-overview)
  * [Key objectives](#key-objectives)
-[📂Dataset](#dataset)
+
+[Dataset](#dataset)
 
 
 ##  Project Overview
@@ -19,7 +20,7 @@ This project demonstrates a comprehensive data cleaning and preprocessing workfl
  - Detect and report duplicate records.
 
 
-## 📂 Dataset
+## Dataset
 This project demonstrates SQL-based data cleaning and preprocessing using a real-world dataset.This datateset is gotten from kaggle.com
 The dataset used in this project is:  
 [sales_data_sample.csv](https://www.kaggle.com/kyanyoga/sample-sales-data)
