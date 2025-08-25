@@ -356,3 +356,29 @@ GROUP BY ORDERNUMBER, PRODUCTCODE
 HAVING COUNT(*) > 1;
 ````
 
+### Key Outcomes
+
+ - Missing and malformed values were handled.
+
+ - Numeric, categorical, and date columns standardized.
+
+ - Derived columns (FULL_NAME, Month_Name) added for easier analysis.
+
+ - Duplicate records identified for review or removal.
+
+ - Data is now ready for visualization, analysis, and reporting.
+
+### Skills Demonstrated
+
+ - SQL Data Cleaning & Transformation
+
+ - Handling NULL and inconsistent values
+
+ - Standardizing categorical and date fields
+
+ - Duplicate detection & reporting
+
+ - Creating derived fields for analysis
+
+ - Preparing data for Analytics and BI projects
+
