@@ -5,6 +5,8 @@
   * [Key objectives](#key-objectives)
 - [Dataset](#dataset)
 - [Data Cleaning Process](#data-cleaning-process)
+  * [1. Load Data](#1-load-data)
+
 
 
 ##  Project Overview
