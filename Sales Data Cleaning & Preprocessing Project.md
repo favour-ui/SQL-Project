@@ -13,7 +13,9 @@
     - [6. Standardizing State & City](#6-standardizing-state--city)
     - [7. Creating Fullname Columns](#7-Creating-Fullname-Columns)
     - [8. Duplicate Detection](#8-Duplicate-Detection)
-
+- [Key Outcomes](#Key-Outcomes)
+- [Skills Demonstrated](#Skills-Demonstrated)
+- [Conclusion](#Conclusion)
 
 ##  Project Overview
 This project demonstrates a comprehensive data cleaning and preprocessing workflow using a sample sales dataset. The dataset contains order, customer, product, and geographical information. The goal is to clean, standardize, and validate the data to prepare it for data analysis, visualization, and reporting.
@@ -373,7 +375,7 @@ GROUP BY ORDERNUMBER, PRODUCTCODE
 HAVING COUNT(*) > 1;
 ````
 
-### Key Outcomes
+## Key Outcomes
 
  - Missing and malformed values were handled.
 
@@ -385,7 +387,7 @@ HAVING COUNT(*) > 1;
 
  - Data is now ready for visualization, analysis, and reporting.
 
-### Skills Demonstrated
+## Skills Demonstrated
 
  - SQL Data Cleaning & Transformation
 
@@ -399,6 +401,6 @@ HAVING COUNT(*) > 1;
 
  - Preparing data for Analytics and BI projects
 
-### ✅ Conclusion:
+## Conclusion
 This project demonstrates a full-fledged data cleaning workflow, converting raw sales data into a clean, structured dataset suitable for analysis, dashboards, and machine learning tasks.
 
