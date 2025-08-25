@@ -11,10 +11,13 @@ This project demonstrates a comprehensive data cleaning and preprocessing workfl
  - Create derived columns for better usability.
 
  - Detect and report duplicate records.
-[Uploading sales_data_sample.csv…]()
+
 
 ### Dataset
 The dataset sales_data_sample.csv includes the following columns:
+## 📂 Dataset
+The dataset used in this project is:  
+[sales_data_sample.csv](./sales_data_sample.csv)
 
 
 | Column Name               | Description                           |
