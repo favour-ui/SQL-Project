@@ -348,7 +348,7 @@ SELECT FULL_NAME FROM sales_data_sample;
 
 Checked for duplicates at multiple levels:
 
- 1. Customer + Order + Product
+ **1. Customer + Order + Product**
 
 ```sql
 SELECT CUSTOMERNAME, ORDERDATE, PRODUCTCODE, COUNT(*) AS count
@@ -357,7 +357,7 @@ GROUP BY CUSTOMERNAME, ORDERDATE, PRODUCTCODE
 HAVING COUNT(*) > 1;
 ````
 
-2. Order + Line Number
+**2. Order + Line Number**
 
 ````sql
 SELECT ORDERNUMBER, ORDERLINENUMBER, COUNT(*) AS count
@@ -366,7 +366,7 @@ GROUP BY ORDERNUMBER, ORDERLINENUMBER
 HAVING COUNT(*) > 1;
 ````
 
-3.Order + Productcode
+**3.Order + Productcode**
 
 ```sql
 SELECT ORDERNUMBER, PRODUCTCODE, COUNT(*) AS count
