@@ -14,9 +14,9 @@ This project demonstrates a comprehensive data cleaning and preprocessing workfl
 
 
 ## 📂 Dataset
-This project demonstrates SQL-based data cleaning and preprocessing using a real-world dataset.
+This project demonstrates SQL-based data cleaning and preprocessing using a real-world dataset.This datateset is gotten from kaggle.com
 The dataset used in this project is:  
-[sales_data_sample.csv](./sales_data_sample.csv)
+[sales_data_sample.csv](https://www.kaggle.com/kyanyoga/sample-sales-data)
 
 
 | Column Name               | Description                           |
