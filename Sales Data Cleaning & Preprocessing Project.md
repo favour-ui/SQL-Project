@@ -10,7 +10,7 @@
     - [3. Standardizing Numeric Columns](#3-Standardizing-Numeric-Columns)
     - [4. Standardizing Dates](#4-Standardizing-Dates)
     - [5. Standardizing Categorical Columns](#5-Standardizing-Categorical-Columns)
-    - [6. Standardizing State & City](#6-Standardizing-State-&-City)
+    - [6. Standardizing State & City](#6-Standardizing-State-City)
     - [7. Creating Fullname Columns](#7-Creating-Fullname-Columns)
     - [8. Duplicate Detection](#8-Duplicate-Detection)
 
