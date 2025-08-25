@@ -48,7 +48,7 @@ The ER diagram is use to visualize table relationships and track foreign keys us
 **STANDARDIZING NUMERICS COLUMNS**
   
 The cleaning are done on the following column where we noticed unusual Numerics values,symbols and text.
-Also note that this cleaning are carry out before we carry out our analysis and RCA
+Note that this cleaning was carried out before any analysis (RCA)
  - **Timestamp** -- are critical for trend analysis, cleaning them first ensured that sorting, filtering and comparisons worked properly. We fixed malformed and inconsistent formats, recast from text to datetime.
  - **JuiceTemperatureC_In** -- this column are neccessary for the determinations of the various temperatgure of the juice as at when produced. it contains some unusual rows like 'WAY TOO HOT','SENSOR_BROKEN','COLD!','HOT!'
  - **ActualCapTorque_Nm** -- The actual "tightness" measured for the cap on this bottle, in Newton
