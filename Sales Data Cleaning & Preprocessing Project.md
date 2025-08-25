@@ -2,7 +2,7 @@
 
 ## Table of Contents
 [ Project Overview](#project-overview)
-   - [Key objectives:](#key-objectives:)
+ - [ Key objectives](#key-objectives)
 
 
 ##  Project Overview
