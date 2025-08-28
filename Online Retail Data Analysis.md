@@ -510,7 +510,7 @@ LIMIT 10;
 
 **Customer Retention Strategy -** Develop loyalty and rewards programs for the highest revenue-generating customers, coupled with personalized offers to strengthen relationships and reduce churn.
 
-**Targeted Marketing Campaigns -** Focus promotional efforts on Afternoon and Evening peak hours, when customers are most active, to maximize conversion rates and revenue impact.
+**Targeted Marketing Campaigns -** Focus promotional efforts on Afternoon and Morning peak hours, when customers are most active, to maximize conversion rates and revenue impact.
 
 
 
