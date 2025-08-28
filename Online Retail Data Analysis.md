@@ -9,7 +9,8 @@
     - [3. Numerics Column Standardization](#3-Numerics-Column-Standardization)
     - [4. Date Column Standardization](#4-Date-Column-Standardization)
     - [5. Dealing With Duplicates](#5-Dealing-With-Duplicates)
-- [ANALYSIS](#analysis)  
+    - [6. Derived Columns](#6-Derived-Columns)
+- [Analysis (EDA)](#Analysis-EDA)  
     - [Queries and Logic Used)](#Queries-and-Logic-Used)
 - [Recommendations](#recommendations)
 
