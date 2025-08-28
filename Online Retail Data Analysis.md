@@ -29,7 +29,7 @@ The main business challenges were:
 ### 1. Data Exploration
  - Columns like Quantity, UnitPrice, InvoiceNo, StockCode, and CustomerID converted to correct data types (INT/FLOAT).
 
- - Removed bad characters (ï»¿InvoiceNo → InvoiceNo).
+ - Removed bad characters (ï»¿InvoiceNo - InvoiceNo).
 
 LOGIC AND QUERY USED
 
@@ -82,16 +82,12 @@ MODIFY COLUMN UnitPrice FLOAT;
 
 ### 2. Text Standardization
 
- - Trimmed whitespace and carriage returns (United Kingdom\r → United Kingdom).
+ - Trimmed whitespace and carriage returns (United Kingdom\r - United Kingdom).
 
 LOGIC AND QUERY USED
 
 ````sql
 SELECT * FROM customer_churn;
-
-SELECT distinct Description FROM customer_churn;
-
-SELECT DISTINCT Country FROM customer_churn;
 
 SELECT DISTINCT Country FROM customer_churn
 WHERE Country IS NULL
@@ -120,13 +116,10 @@ LOGIC AND QUERY USED
 --  WORKING ON NUMERICS VALUES
 
 -- WORKING ON THE InvoiceNo 
-SELECT InvoiceNo FROM customer_churn;
-
 SELECT DISTINCT InvoiceNo FROM customer_churn
 WHERE InvoiceNo IS NULL
 OR InvoiceNo = ''
 OR InvoiceNo NOT REGEXP '^[-]?[0-9]+(\.[0-9]+)?$';
-
 
 ALTER TABLE customer_churn 
 ADD COLUMN RAW_InvoiceNo VARCHAR(20);
@@ -202,8 +195,6 @@ MODIFY COLUMN StockCode INT;
 
 -- WORKING ON CustomerID
 
-SELECT CustomerID FROM customer_churn;
-
 SELECT DISTINCT CustomerID FROM customer_churn
 WHERE CustomerID IS NULL
 OR CustomerID = ''
@@ -234,8 +225,6 @@ ORDER BY Length DESC;
 ALTER TABLE customer_churn
 MODIFY COLUMN InvoiceDate varchar(40);
 
-SELECT InvoiceDate FROM customer_churn;
-
   -- CLEANING THE DATE COLUMN 
 SELECT InvoiceDate,
       str_to_date(InvoiceDate, '%m/%d/%Y %H:%i:%s')
@@ -243,8 +232,6 @@ FROM customer_churn;
 
 UPDATE customer_churn 
 SET InvoiceDate = str_to_date(InvoiceDate, '%m/%d/%Y %H:%i:%s');
-
-DESCRIBE customer_churn;
 
 ALTER TABLE customer_churn
 MODIFY COLUMN InvoiceDate DATETIME;
@@ -282,8 +269,6 @@ ADD COLUMN MONTH VARCHAR(30);
 UPDATE customer_churn
 SET MONTH = MONTHNAME(str_to_date(InvoiceDate, '%Y-%m-%d %H:%i:%s'));
 
-SELECT DISTINCT MONTH FROM customer_churn;
-
 -- QUARTER OF THE DATE
 
 SELECT InvoiceDate,
@@ -309,12 +294,8 @@ SET YEAR = YEAR(str_to_date(InvoiceDate, '%Y-%m-%d %H:%i:%s'));
 ALTER TABLE customer_churn
 MODIFY COLUMN YEAR VARCHAR(10);
 
-SELECT YEAR FROM customer_churn;
-
 ALTER TABLE customer_churn
 MODIFY COLUMN YEAR DATETIME;
-
-SELECT DISTINCT MONTHQUARTER FROM customer_churn ORDER BY MONTHQUARTER;
 
 SELECT 
     CASE QUARTER(InvoiceDate)
@@ -327,8 +308,6 @@ FROM customer_churn;
 
 ALTER TABLE customer_churn
 ADD COLUMN Quarter_Name VARCHAR(20);
-
-SELECT Quarter_Name FROM customer_churn;
 
 UPDATE customer_churn
 SET Quarter_Name = CASE QUARTER(InvoiceDate)
@@ -394,7 +373,6 @@ FROM customer_churn;
 ALTER TABLE customer_churn
 ADD COLUMN Total_sales FLOAT;
 
-
 SELECT QUANTITY
 FROM customer_churn
 WHERE Quantity = 0;
@@ -405,20 +383,13 @@ WHERE Quantity < 0;
 
 UPDATE customer_churn
 SET Total_sales = (Quantity * UnitPrice);
-
-SELECT * FROM customer_churn;
-
-SELECT
-SUM(Total_sales) FROM customer_churn;
-
-SELECT * FROM customer_churn;
 ````
 
 ## Analysis (EDA)
 
   ### Queries and Logic Used
 
- - Revenue by Month (2011) → Seasonal and monthly revenue patterns.
+ - **Revenue by Month (2011) -**  Seasonal and monthly revenue patterns.
 ````sql
  SELECT MONTH, QUANTITY,UNITPRICE,TOTAL_SALES
  FROM customer_churn
@@ -435,7 +406,7 @@ GROUP BY MONTH
 ORDER BY Month;
 ````
 
- - Revenue by Quarter → Business performance by season.
+ - **Revenue by Quarter -** Business performance by season.
 
 ````sql
 SELECT 
@@ -448,7 +419,7 @@ GROUP BY Quarter_Name
 ORDER BY Quarter_Name;
 ````
 
- - Revenue by Time of Day → Peak shopping hours.
+ - **Revenue by Time of Day -** Peak shopping hours.
 
 ````sql
 SELECT 
@@ -461,7 +432,7 @@ GROUP BY TimeOfDay
 ORDER BY TimeOfDay;
 ````
 
- - Top 10 Countries by Revenue (Excluding UK) → International market insights.
+ - **Top 10 Countries by Revenue (Excluding UK) -** International market insights.
 
 ````sql
 SELECT Country,
@@ -474,7 +445,7 @@ ORDER BY Revenue desc
 LIMIT 10;
 ````
 
- - Top 10 Customers by Revenue → High-value customer identification.
+ - **Top 10 Customers by Revenue -** High-value customer identification.
 
 ````sql
 -- Top 10 Customers by Revenue
@@ -500,7 +471,7 @@ ORDER BY Revenue DESC
 LIMIT 10;
 ````
 
- - Top 10 Countries by Demand (Quantity Sold) → Potential expansion regions.
+ - **Top 10 Countries by Demand (Quantity Sold) -** Potential expansion regions.
 ````sql
 SELECT Country,
 SUM(Quantity) AS Total_Demand,
@@ -516,5 +487,14 @@ LIMIT 10;
 ````
 
 ## Recommendations
+
+**Inventory Optimization -** Align stock levels with seasonal demand by ramping up inventory before Q4 holiday sales, ensuring product availability during peak shopping periods.
+
+**Global Expansion -** Prioritize international growth in the top 10 high-demand non-UK countries, tailoring logistics and marketing strategies to regional consumer behavior.
+
+**Customer Retention Strategy -** Develop loyalty and rewards programs for the highest revenue-generating customers, coupled with personalized offers to strengthen relationships and reduce churn.
+
+**Targeted Marketing Campaigns -** Focus promotional efforts on Afternoon and Evening peak hours, when customers are most active, to maximize conversion rates and revenue impact.
+
 
 
