@@ -1,5 +1,20 @@
 # Online Retail Data Analysis
 
+## 📚 Table of Contents     
+- [Context and Problem](#context-and-problem)     
+- [Business Impact](#business-impact)     
+- [Data Cleaning](#data-cleaning)
+    - [1. Data Exploration](#1-Data-Exploration)
+    - [2. Text Column Standardization](#2-Text-column-Standardization)
+    - [3. Numerics Column Standardization](#3-Numerics-Column-Standardization)
+    - [4. Date Column Standardization](#4-Date-Column-Standardization)
+    - [5. Dealing With Duplicates](#5-Dealing-With-Duplicates)
+- [ANALYSIS](#analysis)  
+    - [Queries and Logic Used)](#Queries-and-Logic-Used)
+- [Recommendations](#recommendations)
+
+
+
 ## Context and Problem
 
 The dataset comes from an online retail store containing transactional details such as invoices, stock codes, product descriptions, quantities, dates, unit prices, customer IDs, and countries.
@@ -80,7 +95,7 @@ ALTER TABLE customer_churn
 MODIFY COLUMN UnitPrice FLOAT;
 ````
 
-### 2. Text Standardization
+### 2. Text Column Standardization
 
  - Trimmed whitespace and carriage returns (United Kingdom\r - United Kingdom).
 
@@ -98,7 +113,7 @@ UPDATE customer_churn
 SET Country = TRIM(REPLACE(Country, '\r', ''));
 ````
 
-### 3. Numerics Standardization
+### 3. Numerics Column Standardization
 
  - Here all Error related to Nuremics values are Handled
   
@@ -204,7 +219,7 @@ UPDATE customer_churn
 SET CustomerID = NULLIF(CustomerID,'');
 ````
 
-### 4. Date Standardization
+### 4. Date Column Standardization
 
  - Converted InvoiceDate into proper DATETIME.
 
@@ -318,7 +333,7 @@ SET Quarter_Name = CASE QUARTER(InvoiceDate)
     END;
 ````
 
-### 5. Duplicates Standardization
+### 5. Dealing With Duplicates 
 
  - Identified duplicates with a CTE and deleted them.
 
