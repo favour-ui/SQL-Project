@@ -504,13 +504,13 @@ LIMIT 10;
 
 ## Recommendations
 
-**Inventory Optimization -** Align stock levels with seasonal demand by ramping up inventory before Q4 holiday sales, ensuring product availability during peak shopping periods.
+**1. Inventory Optimization -** Align stock levels with seasonal demand by ramping up inventory before Q4 holiday sales, ensuring product availability during peak shopping periods.
 
-**Global Expansion -** Prioritize international growth in the top 10 high-demand non-UK countries, tailoring logistics and marketing strategies to regional consumer behavior.
+**2. Global Expansion -** Prioritize international growth in the top 10 high-demand non-UK countries, tailoring logistics and marketing strategies to regional consumer behavior.
 
-**Customer Retention Strategy -** Develop loyalty and rewards programs for the highest revenue-generating customers, coupled with personalized offers to strengthen relationships and reduce churn.
+**3. Customer Retention Strategy -** Develop loyalty and rewards programs for the highest revenue-generating customers, coupled with personalized offers to strengthen relationships and reduce churn.
 
-**Targeted Marketing Campaigns -** Focus promotional efforts on Afternoon and Morning peak hours, when customers are most active, to maximize conversion rates and revenue impact.
+**4. Targeted Marketing Campaigns -** Focus promotional efforts on Afternoon and Morning peak hours, when customers are most active, to maximize conversion rates and revenue impact.
 
 
 
