@@ -37,7 +37,60 @@ We worked on a structured detailed  dataset built around a star schema with a ce
 
 ## DATA CLEANING
 
-**PHASE 1**
+### PHASE 1
+
+**Standardizing Numeric Columns**
+
+ - Ensured all numeric fields (e.g., user_id, session_id, activity_id) were in the correct data type (INT or BIGINT) to prevent mismatches during joins.
+
+ - Converted any string-based numeric values into proper numeric formats.
+
+ - Validated that measures like retained_users, cohort_size, and counts were computed as integers, avoiding issues with text-based aggregation.
+
+**Business Impact:** Guarantees consistency when aggregating or calculating metrics (e.g., retention rates, adoption counts).
+
+### PHASE 2
+
+**STANDARDIZING TEXT COLUMNS**
+
+ - Converted all activity types to a consistent mapped format (task_reminder - Task Reminders, voice_assistant - Voice Assistant, custom_theme - Custom Themes).
+
+   **LOGIC AND QUERY USED**
+
+```sql
+   
+ALTER TABLE activity_log ADD COLUMN mapped_activity_type VARCHAR(100);
+ 
+UPDATE activity_log
+SET mapped_activity_type = CASE
+    WHEN activity_type = 'task_reminder' THEN 'Task Reminders'
+    WHEN activity_type = 'voice_assistant' THEN 'Voice Assistant'
+    WHEN activity_type = 'custom_theme'   THEN 'Custom Themes'
+    ELSE activity_type
+END;
+```
+
+ - Applied consistent casing (Title Case) across features (Feature Name) to match activity log values.
+
+ - Removed extra spaces and corrected inconsistent naming.
+
+**Business Impact:** Ensures features and activities can be reliably joined across tables (e.g., activity_log - features). Without this, adoption metrics would undercount due to mismatches.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
