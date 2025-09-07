@@ -76,8 +76,17 @@ END;
 
 **Business Impact:** Ensures features and activities can be reliably joined across tables (e.g., activity_log - features). Without this, adoption metrics would undercount due to mismatches.
 
+### PHASE 3
 
+**Standardizing Timestamp Columns**
 
+Ensured all timestamp fields (login_time, timestamp, sign_up_date) were stored in DATETIME or DATE format.
+
+Converted inconsistent formats (e.g., text-based timestamps like "2025/02/20 12:00" - standard YYYY-MM-DD HH:MM:SS).
+
+Created derived fields such as week_num using TIMESTAMPDIFF(WEEK, launch_date, login_time) for cohort retention analysis.
+
+**Business Impact:** Ensures consistency in time-based analysis, making retention curves and weekly engagement trends accurate and comparable.
 
 
 
