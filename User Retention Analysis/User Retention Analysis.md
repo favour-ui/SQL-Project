@@ -168,7 +168,17 @@ WHERE session_id IN (
 
 **Business Impact:** Prevents overestimation of active users, adopters, or retention, giving stakeholders a true picture of user behavior.
 
+### Handling NULL Values
 
+ - Replaced missing values in activity_type with "Null".
+
+ - Dropped rows with NULL user_id since these can’t be tied to real users.
+
+ - Ensured all records included valid sign_up_date and timestamp values.
+
+ - For reporting, excluded invalid rows rather than imputing, to keep adoption/retention rates conservative.
+
+ - Business Impact: Filters out incomplete or unreliable data, ensuring results reflect only valid, trackable users.
 
 
 
