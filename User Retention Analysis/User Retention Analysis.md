@@ -2,13 +2,19 @@
 
 ## 📚 Table of Contents
 - [CONTEXT](#context)
-- [PROBLEM](#PROBLEM)       
+- [PROBLEM](#PROBLEM)
+    - [Who are the stakeholders](#Who-are-the-stakeholders)       
 - [BUSINESS IMPACT](#business-impact)
-     - [Who are the stakeholders](#Who-are-the-stakeholders)
      - [Data Exploration and Schema Design](#Data-Exploration-and-Schema-Design) 
 - [ER DIAGRAM](#er-diagram)  
 - [DATA CLEANING](#data-cleaning)
-- [ANALYSIS](#analysis)  
+     - [PHASE 1](#PHASE-1)
+     - [PHASE 2](#PHASE-2)
+     - [PHASE 3](#PHASE-3)
+     - [PHASE 4](#PHASE-4)
+     - [PHASE 5](#PHASE-5)
+- [ANALYSIS](#analysis)
+     - [Metrics We Calculated](#Metrics-We-Calculated) 
 - [QUERIES AND LOGIC USED (VIEWS)](#queries-and-logic-used-views)
 - [VISUALIZATIONS](#visualizations)
 - [RECOMMENDATIONS](#recommendations)
@@ -182,6 +188,8 @@ WHERE session_id IN (
  - Used COUNT(DISTINCT ...) in queries to prevent duplicates from inflating adoption/retention numbers.
 
 **Business Impact:** Prevents overestimation of active users, adopters, or retention, giving stakeholders a true picture of user behavior.
+
+### PHASE 5
 
 ### Handling NULL Values
 
