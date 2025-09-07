@@ -21,5 +21,27 @@ By driving more users toward adopting features like Task Reminders or Voice Assi
 
  - **Improve ROI of feature development:** showing clear evidence that product innovations lead to measurable retention gains.
 
+### Data Exploration and Schema Design
+
+
+We worked on a structured detailed  dataset built around a star schema with a central fact table called "**activity_log**"
+
+ - **features.csv (Features Table)**
+ - **users.csv (Users Table)**
+ - **sessions.csv (Sessions Table)**
+
+## ER DIAGRAM
+
+<img width="795" height="704" alt="COLUME ER DIAGRAM" 
+ src="https://github.com/user-attachments/assets/fdad806d-0c2e-4134-a4df-e16a2ecbe031" />
+
+## DATA CLEANING
+
+**PHASE 1**
+
+
+
+
+
 
 
