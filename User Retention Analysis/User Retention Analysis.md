@@ -1,5 +1,20 @@
 # User Retention Analysis
 
+## 📚 Table of Contents
+- [CONTEXT](#context)
+- [PROBLEM](#PROBLEM)       
+- [BUSINESS IMPACT](#business-impact)
+     - [Who are the stakeholders](#Who-are-the-stakeholders)
+     - [Data Exploration and Schema Design](#Data-Exploration-and-Schema-Design) 
+- [ER DIAGRAM](#er-diagram)  
+- [DATA CLEANING](#data-cleaning)
+- [ANALYSIS](#analysis)  
+- [QUERIES AND LOGIC USED (VIEWS)](#queries-and-logic-used-views)
+- [VISUALIZATIONS](#visualizations)
+- [RECOMMENDATIONS](#recommendations)
+- [WHY WE ARE CONFIDENT THE FIX WILL WORK](#why-we-are-confident-the-fix-will-work)
+
+
 ## CONTEXT
 On February 20, 2025, Colume introduced three new features — Task Reminders, Voice Assistant, and Custom Themes. The product team wants to understand how these features influence user behavior, particularly their impact on retention and long-term engagement.
 
