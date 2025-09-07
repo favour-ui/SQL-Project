@@ -65,9 +65,10 @@ bottle was processed, in degrees Celsius.
 - **LeakTestResult(String):** The outcome of the test to see if the bottle leaks: "Pass" (it doesn't leak) or 
 "Fail" (it leaks).
 
-   **PHASE 3**
+**PHASE 3**
 
-   **REMOVING DUPLICATES**
+**REMOVING DUPLICATES**
+  
 We tested key columns to identify duplicate values in the dataset. After analysis, we removed all duplicate rows. In total, over 32,000 duplicate records were deleted, ensuring the dataset is accurate, consistent, and ready for reliable analysis.
   **Steps:**
 1. Detect duplicates with COUNT(*)
