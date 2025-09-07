@@ -80,17 +80,93 @@ END;
 
 **Standardizing Timestamp Columns**
 
-Ensured all timestamp fields (login_time, timestamp, sign_up_date) were stored in DATETIME or DATE format.
+ - Ensured all timestamp fields (login_time, timestamp, sign_up_date) were stored in DATETIME or DATE format.
 
-Converted inconsistent formats (e.g., text-based timestamps like "2025/02/20 12:00" - standard YYYY-MM-DD HH:MM:SS).
+ - Converted inconsistent formats (e.g., text-based timestamps like "2025/02/20 12:00" - standard YYYY-MM-DD HH:MM:SS).
 
-Created derived fields such as week_num using TIMESTAMPDIFF(WEEK, launch_date, login_time) for cohort retention analysis.
+ - Created derived fields such as week_num using TIMESTAMPDIFF(WEEK, launch_date, login_time) for cohort retention analysis.
 
 **Business Impact:** Ensures consistency in time-based analysis, making retention curves and weekly engagement trends accurate and comparable.
 
+### PHASE 4
+
+**REMOVING DUPLICATES**
+
+ - Checked for duplicate entries in key logs:
+
+   **Users Table:** Ensured unique user_id.
+
+**LOGIC AND QUERY USED**
+  
+  ```sql
+SELECT * FROM USERS;
+ 
+ SELECT `Full name`,Email,sign_up_date,COUNT(*)
+ FROM USERS
+ GROUP BY `Full name`,Email,sign_up_date
+ HAVING COUNT(*) > 1;
+
+WITH CTE AS (SELECT user_id,`Full name`,Email,sign_up_date,
+ROW_NUMBER() OVER (PARTITION BY `Full name`, Email, sign_up_date
+ORDER BY user_id
+) AS rn
+FROM users
+)
+SELECT * FROM CTE WHERE rn > 1;
 
 
+WITH CTE AS (
+SELECT user_id,`Full name`,Email,sign_up_date,
+ROW_NUMBER()OVER(PARTITION BY `Full name`,Email,sign_up_date
+ORDER BY user_id)  AS rn
+FROM users
+)
+DELETE FROM users
+WHERE user_id IN ( SELECT user_id FROM CTE WHERE rn > 1);
 
+```
+
+   **Sessions Table:** Validated no duplicate (session_id, user_id, login_time) rows.
+
+**LOGIC AND QUERY USED**
+
+```sql
+SELECT user_id, login_time, device_type, COUNT(*) AS duplicate_count
+FROM sessions
+GROUP BY user_id, login_time, device_type
+HAVING COUNT(*) > 1;
+
+SELECT user_id,login_time,device_type
+FROM sessions
+WHERE user_id = 'nujjq9' AND device_type = 'Web\r' AND login_time = '2025-03-13 11:36:42';
+
+
+SELECT * FROM sessions;
+
+WITH CTE AS (SELECT session_id,
+ROW_NUMBER() OVER (
+PARTITION BY user_id, login_time, device_type
+ORDER BY session_id
+) AS rn
+FROM sessions
+)
+DELETE FROM sessions
+WHERE session_id IN (
+    SELECT session_id 
+    FROM (SELECT session_id FROM CTE WHERE rn > 1) AS x
+);
+ SHOW PROCESSLIST;
+  CREATE INDEX IDX_DUPLICATE ON sessions (session_id(20),user_id(20),login_time,device_type(20));
+ KILL 33;
+ SELECT * FROM sessions;
+ 
+```
+
+   **Activity Log:** Removed repeated actions logged multiple times by error.
+
+ - Used COUNT(DISTINCT ...) in queries to prevent duplicates from inflating adoption/retention numbers.
+
+**Business Impact:** Prevents overestimation of active users, adopters, or retention, giving stakeholders a true picture of user behavior.
 
 
 
