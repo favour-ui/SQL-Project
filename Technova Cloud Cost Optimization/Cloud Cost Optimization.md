@@ -1,7 +1,7 @@
 #  TechNova Cloud Cost Optimization Case Study
 *A Data-Driven Investigation into Cloud Waste and Strategic Spend*
 
-Analyzing and reducing unnecessary cloud expenses using MySQL to identify waste, inefficiency, and opportunities for savings.
+*Analyzing and reducing unnecessary cloud expenses using MySQL to identify waste, inefficiency, and opportunities for savings.*
 
 ---
 
