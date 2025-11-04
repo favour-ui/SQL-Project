@@ -190,18 +190,18 @@ GROUP BY t.resource_tag_team,b.quarterly_budgeted_amount;
 ## RESULTS AND VISUALS
 
 ### VISUAL 1 — Cloud Spend Overview
-![Visual 1](https://github.com/silviawutche/Technova-Cloud-Cost-Optimization-Case-Study/blob/main/Visual%201.jpg)
+![Visual 1](https://github.com/favour-ui/SQL-Project/blob/main/Technova%20Cloud%20Cost%20Optimization/Visual%201.png)
 Cloud costs spiked **37 % in August** while teams used only **17–32 % of budgets**.  
 Waste concentrated in **User Front-End (21 %)** and **Marketing API (22 %)**.
 
 ### VISUAL 2 — Strategic Project Variance
-![Visual 2](https://github.com/silviawutche/Technova-Cloud-Cost-Optimization-Case-Study/blob/main/Visual%202.jpg)
+![Visual 2](https://github.com/favour-ui/SQL-Project/blob/main/Technova%20Cloud%20Cost%20Optimization/Visual%202.png)
 **Project Titan** = 35 % of total spend but only 1 % waste.  
 CPU > 5 % across all large instances → efficient usage (≈ 41 % of budget).  
 → The cost spike was **legitimate scaling**, not inefficiency
 
 ### VISUAL 3 — Resources to Fix & Recommendations
-![Visual 3](https://github.com/silviawutche/Technova-Cloud-Cost-Optimization-Case-Study/blob/main/Visual%203.jpg)
+![Visual 3](https://github.com/favour-ui/SQL-Project/blob/main/Technova%20Cloud%20Cost%20Optimization/Visual%203.png)
 **2 593** inefficient resources found outside Titan; **50 critical double-offenders** (post-decommission + idle).  
 Potential savings: ≈ $120 K per quarter
 
